@@ -1,0 +1,582 @@
+/* Resume Builder - Professional UI Styles for Beginners */
+
+/* 
+  BEGINNER GUIDE:
+  This CSS file contains all the styling for our Resume Builder app.
+  We use modern CSS features like gradients, flexbox, and grid for a professional look.
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header Styles */
+.app-header {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 1.5rem 2rem;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.app-header h1 {
+  color: #333;
+  font-size: 2.2rem;
+  font-weight: 600;
+  text-align: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Container Styles */
+.app-container {
+  display: flex;
+  flex: 1;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+/* Sidebar Navigation */
+.sidebar {
+  width: 280px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  height: fit-content;
+  position: sticky;
+  top: 2rem;
+}
+
+.sidebar button {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  margin-bottom: 1rem;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  color: #333;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.sidebar button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.sidebar button:active {
+  transform: translateY(0);
+}
+
+.sidebar button.active {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  min-height: 600px;
+}
+
+/* Form Styles */
+.form-section {
+  max-width: 700px;
+}
+
+.form-section h2 {
+  color: #333;
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.form-section p {
+  color: #666;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+label {
+  display: block;
+  color: #333;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+input, textarea, select {
+  width: 100%;
+  padding: 0.875rem 1rem;
+  border: 2px solid #e1e5e9;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background: white;
+  font-family: inherit;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+  transform: translateY(-1px);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 120px;
+  line-height: 1.6;
+}
+
+/* Button Styles */
+.btn {
+  padding: 0.875rem 2rem;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+}
+
+.btn-secondary {
+  background: #f8f9fa;
+  color: #333;
+  border: 2px solid #e1e5e9;
+}
+
+.btn-secondary:hover {
+  background: #e9ecef;
+  transform: translateY(-1px);
+}
+
+.btn-danger {
+  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a52 100%);
+  color: white;
+}
+
+.btn-danger:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 107, 107, 0.4);
+}
+
+/* Dynamic List Styles */
+.dynamic-list {
+  margin: 1.5rem 0;
+}
+
+.list-item {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  border: 1px solid #e1e5e9;
+  position: relative;
+}
+
+.list-item:hover {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.remove-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: #ff6b6b;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.add-btn {
+  margin-top: 1rem;
+}
+
+/* Skills Tags */
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.skill-tag {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.skill-remove {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 1.1rem;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+/* Preview Styles */
+.preview-container {
+  display: flex;
+  gap: 2rem;
+  height: 100%;
+}
+
+.preview-controls {
+  width: 250px;
+}
+
+.resume-preview {
+  flex: 1;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.resume-container {
+  padding: 2rem;
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  width: 210mm;
+  min-height: 297mm;
+  margin: 0 auto;
+  background: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.resume-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #667eea;
+}
+
+.resume-name {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.resume-title {
+  font-size: 1.2rem;
+  color: #667eea;
+  margin-bottom: 1rem;
+}
+
+.resume-contact {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.resume-section {
+  margin-bottom: 1.5rem;
+}
+
+.resume-section h3 {
+  color: #667eea;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #e1e5e9;
+}
+
+.experience-item, .education-item {
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.experience-item:last-child, .education-item:last-child {
+  border-bottom: none;
+}
+
+.item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.5rem;
+}
+
+.company, .institution {
+  font-weight: bold;
+  color: #333;
+}
+
+.position, .degree {
+  font-style: italic;
+  color: #667eea;
+}
+
+.duration, .year {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.responsibilities {
+  margin-top: 0.5rem;
+}
+
+.responsibilities ul {
+  margin-left: 1.5rem;
+}
+
+.responsibilities li {
+  margin-bottom: 0.3rem;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.skill-item {
+  background: #f8f9fa;
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.9rem;
+  border: 1px solid #e1e5e9;
+}
+
+/* Print Button Styles */
+.print-btn {
+  background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.print-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(40, 167, 69, 0.4);
+}
+
+/* Print Styles for PDF */
+@media print {
+  * {
+    -webkit-print-color-adjust: exact !important;
+    color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  
+  body {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  
+  body * {
+    visibility: hidden;
+  }
+  
+  .resume-container, .resume-container * {
+    visibility: visible;
+  }
+  
+  .resume-container {
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+    width: 100% !important;
+    max-width: none !important;
+    padding: 0.5in !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+    box-shadow: none !important;
+    background: white !important;
+    font-size: 12pt !important;
+    line-height: 1.4 !important;
+  }
+  
+  .preview-controls,
+  .preview-actions,
+  .sidebar,
+  .app-header {
+    display: none !important;
+  }
+  
+  .resume-header {
+    margin-bottom: 1rem !important;
+  }
+  
+  .resume-section {
+    margin-bottom: 1rem !important;
+    page-break-inside: avoid;
+  }
+  
+  .resume-section h3 {
+    color: #333 !important;
+    font-size: 14pt !important;
+    margin-bottom: 0.5rem !important;
+  }
+  
+  .experience-item,
+  .education-item {
+    page-break-inside: avoid;
+    margin-bottom: 0.75rem !important;
+  }
+}
+
+/* Responsive Design for Mobile/Tablet */
+@media (max-width: 768px) {
+  .app-container {
+    flex-direction: column;
+    padding: 1rem;
+  }
+  
+  .sidebar {
+    width: 100%;
+    position: static;
+  }
+  
+  .sidebar button {
+    margin-bottom: 0.5rem;
+  }
+  
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .preview-container {
+    flex-direction: column;
+  }
+  
+  .preview-controls {
+    width: 100%;
+  }
+  
+  .resume-contact {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .item-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* Loading and Success States */
+.loading {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #f3f3f3;
+  border-top: 2px solid #667eea;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.success-message {
+  color: #28a745;
+  background: #d4edda;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #c3e6cb;
+  margin: 1rem 0;
+}
+
+.error-message {
+  color: #dc3545;
+  background: #f8d7da;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #f5c6cb;
+  margin: 1rem 0;
+}
